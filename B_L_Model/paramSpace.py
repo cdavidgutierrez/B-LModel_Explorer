@@ -46,13 +46,13 @@ def main():
 
         try:
             # Change the working directory
-            os.chdir("/BSM-Submodules/SPheno")
+            os.chdir("../BSM-Submodules/SPheno")
 
             # Execute SPhenoBLSM
             subprocess.run(["bin/SPhenoBLSM", "LesHouches.in.BLSM"])
 
             # Execute paramsExtractor.py
-            subprocess.run(["python3", "/Utils/paramsExtractor.py", spheno_file_path, IC_file_path])
+            subprocess.run(["python3", "../Utils/paramsExtractor.py", spheno_file_path, IC_file_path])
 
         finally:
             # Restore the working directory even if an exception occurs
