@@ -41,7 +41,7 @@ def main():
         # Execute SPhenoBLSM
         subprocess.run(["bin/SPhenoBLSM", "LesHouches.in.BLSM"])
 
-        subprocess.run(["python3", "/home/david/Desktop/ZpExplorer/paramsExtractor.py", spheno_file_path, IC_file_path])
+        subprocess.run(["python3", "../Utils/paramsExtractor.py", spheno_file_path, IC_file_path])
 
     finally:
             # Restore the working directory even if an exception occurs
