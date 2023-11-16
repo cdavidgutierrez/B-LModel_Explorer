@@ -12,4 +12,4 @@ Para construir el archivo de entrada del modelo $B-L$:
 * Adapte la ruta en la línea `49` para que coincida con la carpeta principal de *SPheno* en su dispositivo.
 * Dentro de la carpeta `B_L_Model` ejecute el comando `python3 paramsSpace.py <LesHouches_input_file_path> <SPheno_output_path> <input_card_file_path>`.
 
-Para $\sim 300$ puntos de referencia el procesamiento tarda al rededor de $15$ minutos. Una vez generado el archivo en la dirección `input_card_file_path` copie su contenido en el archivo `incard/card_1.dat` del programa *Z'-explorer*.
+Para $\sim 300$ puntos de referencia el procesamiento tarda al rededor de $15$ minutos. Una vez generado el archivo en la dirección `input_card_file_path` copie su contenido en el archivo `incard/card_1.dat` del programa *Z'-explorer*. El script `oneBP.py` sirve para generar un único punto de entrada. Para cambiar los parámetros editar los valores de `ZpMass_val` y `g1p_val` dentro de dicho archivo. La ejecución de este script requiere los mismos parámetros que `paramSpace.py`.
