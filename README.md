@@ -1,6 +1,11 @@
-# B-LModel_Explorer
+# Análisis de señales de bosones vectoriales en el LHC para el modelo $B-L$.
 
-#### Modelo $B-L$.
+### Requerimientos.
+En primer lugar se requiere tener ejecutado el programa *SPheno* con el archivo de entrada `LesHouches.in.BLSM` generado a partir de la implementación del modelo $B-L$ disponible en *SARAH*. Para mayor información, consultar el uso de *SARAH*+*SPheno* en [].
+
+Lo segundo necesario es haber descargado el programa *Z'-explorer* a partir de las intrucciones en el repositorio del [proyecto](https://github.com/ro-sanda/Z--explorer).
+
+### Modelo $B-L$.
 
 Para construir el archivo de entrada del modelo $B-L$:
 * En el archivo `paramSpace.py` modifique los parámetros de las variables `ZpMass_spec` y `g1p_spec` para especificar la región sobre la que se va a hacer el barrido. En la definición de la variable `allowed_params` ya está impuesta la condición $M_{Z'}/g'_1>7.1\ \text{TeV}$.
