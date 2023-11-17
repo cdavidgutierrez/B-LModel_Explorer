@@ -26,7 +26,7 @@ Como se hace para el modelo $B-L$ el contenido del archivo generado se debe copi
 
 * Las funciones con las que se calculan los acoples en el modelo SSM están en el scritp `SSM_couplings.py`.
 * Para el modelo $B-L$:
-  *`paramsFinder.py` se encarga de extraer información del archivo de salida de *SPheno*.
-  *`paramsFunctions.py` calcula los parámetros de entrada para *Z'-explorer*.
-  *`paramsExtractor.py` contruye el archivo de salida para un punto.
-  *`paramsSpace.py` ejecuta el archivo LesHouches y calcula los parámetros que almacena en el archivo para el programa de manera iterativa.
+    *`paramsFinder.py` se encarga de extraer información del archivo de salida de *SPheno*.
+    *`paramsFunctions.py` calcula los parámetros de entrada para *Z'-explorer*.
+    *`paramsExtractor.py` contruye el archivo de salida para un punto.
+    *`paramsSpace.py` ejecuta el archivo LesHouches y calcula los parámetros que almacena en el archivo para el programa de manera iterativa.
