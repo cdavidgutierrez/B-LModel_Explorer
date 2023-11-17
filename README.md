@@ -13,3 +13,20 @@ Para construir el archivo de entrada del modelo $B-L$:
 * Dentro de la carpeta `B_L_Model` ejecute el comando `python3 paramsSpace.py <LesHouches_input_file_path> <SPheno_output_path> <input_card_file_path>`.
 
 Para $\sim 300$ puntos de referencia el procesamiento tarda al rededor de $15$ minutos. Una vez generado el archivo en la dirección `input_card_file_path` copie su contenido en el archivo `incard/card_1.dat` del programa *Z'-explorer*. El script `oneBP.py` sirve para generar un único punto de entrada. Para cambiar los parámetros editar los valores de `ZpMass_val` y `g1p_val` dentro de dicho archivo. La ejecución de este script requiere los mismos parámetros que `paramSpace.py`.
+
+### SSM.
+
+Para construir el archivo de entrada:
+* En el archivo `SSM_Space.py` modifique el rango en el que se define la masa `ZpMass_spec`.
+* Dentro de la carpeta `SSM_Model` ejecute el comando `python3 SSM_Space.py <input_card_file_path>`.
+
+Como se hace para el modelo $B-L$ el contenido del archivo generado se debe copiar en `incard/card_1.dat` para ser compilado por el programa.
+
+### Notas:
+
+* Las funciones con las que se calculan los acoples en el modelo SSM están en el scritp `SSM_couplings.py`.
+* Para el modelo $B-L$:
+  *`paramsFinder.py` se encarga de extraer información del archivo de salida de *SPheno*.
+  *`paramsFunctions.py` calcula los parámetros de entrada para *Z'-explorer*.
+  *`paramsExtractor.py` contruye el archivo de salida para un punto.
+  *`paramsSpace.py` ejecuta el archivo LesHouches y calcula los parámetros que almacena en el archivo para el programa de manera iterativa.
