@@ -24,7 +24,6 @@ def main():
 
     THETA_BL = blMixAngle(data) #1e-3 |T_bl|<=10^-3
     bosonMasses = massBlock(data)
-    #THETA_W = np.arccos(bosonMasses[3]/bosonMasses[1])
 
     gamma_inv, gamma_xx = decayBlock(data)
 
@@ -38,7 +37,6 @@ def main():
     e_charges = fermion_charges[fermions[2]]
 
     for i in range(3):
-        #print('Calculando g para {}'.format(fermions[0]+str(i+1)+'L'))
         model_params.append(g_f_L(*u_charges, couplings['gBL'], THETA_BL, Nc=3))
         model_params.append(g_f_R(*u_charges, couplings['gBL'], THETA_BL, Nc=3))
         model_params.append(g_f_L(*d_charges, couplings['gBL'], THETA_BL, Nc=3))
@@ -58,7 +56,6 @@ def main():
     str_params = [str(param) for param in rouded_params]
     BP_string = '  '.join(str_params)
 
-    # Create a file
     output_file_path = os.path.join(IC_file_path, "icard_B-L.dat")
     with open(output_file_path, "a") as file:
         file.write(BP_string+'\n')
